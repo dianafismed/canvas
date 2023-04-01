@@ -1,32 +1,42 @@
 var tela = document.querySelector('canvas')
 var pincel = tela.getContext('2d')
+
 pincel.fillStyle = 'grey'
 pincel.fillRect(0,0 , 600,400)
 
-
-function desenhaCirculo(x, y, raio, cor) {
-  pincel.fillStyle = cor;
+function desenhaCirculo(x, y, raio) {
+  pincel.fillStyle = 'blue';
   pincel.beginPath();
   pincel.arc(x, y, raio, 0, 2 * Math.PI);
   pincel.fill();
 }
-desenhaCirculo(300, 200, raio + 20, 'red');
-desenhaCirculo(300, 200, raio + 10, 'white');
-desenhaCirculo(300, 200, raio, 'red');
-function dispara(evento) {
-  var x = evento.pageX - tela.offsetLeft;
-  var y = evento.pageY - tela.offsetTop;
-  if ((x > 300 - raio) &&
-    (x < 300 + raio) &&
-    (y > 200 - raio) &&
-    (y < 200 + raio)) {
-    alert('Acertou no centro do alvo');
-  }
-}
-tela.onclick = dispara;
+desenhaCirculo(20,20,10)
 
 
+//var raio = 10;
+// function desenhaCirculo(x, y, raio, cor) {
+//   pincel.fillStyle = cor;
+//   pincel.beginPath();
+//   pincel.arc(x, y, raio, 0, 2 * 3.14);
+//   pincel.fill();
+// }
+// desenhaCirculo(300, 200, raio + 20, 'red');
+// desenhaCirculo(300, 200, raio + 10, 'white');
+// desenhaCirculo(300, 200, raio, 'red');
+// function dispara(evento) {
+//   var x = evento.pageX - tela.offsetLeft;
+//   var y = evento.pageY - tela.offsetTop;
+//   if ((x > 300 - raio) &&
+//     (x < 300 + raio) &&
+//     (y > 200 - raio) &&
+//     (y < 200 + raio)) {
+//     alert('Acertou no centro do alvo');
+//   }
+// }
+// tela.onclick = dispara;
 
+
+//var raio = 10
 // var desenha = false;
 // function desenhaCirculo(evento) {
 //   if (desenha) {
