@@ -4,13 +4,121 @@ var pincel = tela.getContext('2d')
 pincel.fillStyle = 'grey'
 pincel.fillRect(0,0 , 600,400)
 
-function desenhaCirculo(x, y, raio) {
-  pincel.fillStyle = 'blue';
-  pincel.beginPath();
-  pincel.arc(x, y, raio, 0, 2 * Math.PI);
-  pincel.fill();
-}
-desenhaCirculo(20,20,10)
+
+// // joguinho de acertar o alvo
+// raio = 10
+// var xAleatorio
+// var yAleatorio
+
+// function desenhaCirculo(x, y, raio, cor) {
+//   pincel.fillStyle = cor;
+//   pincel.beginPath();
+//   pincel.arc(x, y, raio, 0, 2 * Math.PI);
+//   pincel.fill();
+// }
+// function limpaTela() {
+//   pincel.clearRect(0,0,600,400)
+// }
+// function desenhaAlvo(x,y) {
+//   desenhaCirculo(x,y,raio+20,'red')
+//   desenhaCirculo(x,y,raio+10,'white')
+//   desenhaCirculo(x,y,raio,'red')
+// }
+// function sorteiaPosicao(maximo){
+//   return Math.floor(Math.random() * maximo)
+// }
+// function atualizaTela() {
+//   limpaTela()
+//   xAleatorio = sorteiaPosicao(600)
+//   yAleatorio = sorteiaPosicao(400)
+//   desenhaAlvo(xAleatorio,yAleatorio)
+// }
+// setInterval(atualizaTela,1000)
+// function dispara(evento) {
+//   var x = evento.pageX - tela.offsetLeft
+//   var y = evento.pageY - tela.offsetTop
+//   console.log(xAleatorio)
+//   if((x > xAleatorio - raio)&&(x < xAleatorio + raio)
+//     && (y > yAleatorio - raio)&&(y < yAleatorio + raio)){
+//     alert('Acertou')
+//   }
+// }
+// tela.onclick = dispara
+
+// //mexendo a posição da bolinha
+// var x = 20
+// var y = 20
+// // códigos do teclado
+// var esquerda = 37
+// var cima = 38
+// var direita = 39
+// var baixo = 40
+// // taxa de incremento
+// var taxa = 10
+
+// function atualizaTela() {
+//   limpaTela();
+//   desenhaCirculo(x, y, 10);
+// }
+// setInterval(atualizaTela, 50);
+// function leDoTeclado(evento) {
+//   // como saber qual tecla foi pressionada?
+//   if(evento.keyCode == cima) {
+//     y = y - taxa
+//   } else if (evento.keyCode == baixo) {
+//     y = y + taxa
+//   } else if (evento.keyCode == esquerda) {
+//     x = x - taxa
+//   } else if (evento.keyCode == direita) {
+//     x = x + taxa
+//   }
+// }
+// document.onkeydown = leDoTeclado;
+
+
+// // aumentando e diminuindo o raio da bolinha
+// var raio = 20
+// sentido = 1
+// function aumentaDiminuiBolinha(){
+//   limpaTela()
+//   if(raio<20){
+//     sentido = 1
+//   }else if(raio>30){
+//     sentido = -1
+//   }
+//   desenhaCirculo(100,100,raio, 0, 2*Math.PI)
+//   raio = raio + sentido
+// }
+// setInterval(aumentaDiminuiBolinha,20)
+
+
+
+
+// // andando de um lado para o outro
+// var x = 20
+// sentido = 1
+// function atualizaTela(){
+//   limpaTela()
+//   if(x>600){
+//     sentido = -1
+//   }else if (x<0){
+//     sentido = 1
+//   }
+//   desenhaCirculo(x, 20, 10)
+//   x = x + sentido
+// }
+// setInterval(atualizaTela,2)
+
+
+// for(var x = 20; x < 600; x++){
+//   limpaTela()
+//   desenhaCirculo(x,20,10)
+// }
+
+// function exibeMensagemNoConsole() {
+//   console.log('Chamei')
+// }
+// setInterval(exibeMensagemNoConsole,5000)
 
 
 //var raio = 10;
